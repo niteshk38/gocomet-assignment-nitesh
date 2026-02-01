@@ -48,6 +48,9 @@ public class LoginPage {
     }
 
     public String getMessage() {
-        return wait.until(ExpectedConditions.visibilityOf(message)).getText();
+        return wait.until(
+                ExpectedConditions.textToBePresentInElement(message, "")
+        ) ? message.getText() : "";
     }
+
 }

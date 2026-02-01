@@ -13,7 +13,6 @@ public class BaseTest {
         driver = Driver.getDriver();
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/login");
-        Thread.sleep(5000);
     }
 
     @AfterMethod
