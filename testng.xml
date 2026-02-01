@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GoComet_Nitesh">
+
+    <test name="UI Tests">
+        <packages>
+            <package name="com.gocomet.tests.login"/>
+        </packages>
+    </test>
+
+</suite>
