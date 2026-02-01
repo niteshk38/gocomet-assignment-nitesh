@@ -24,3 +24,14 @@ https://the-internet.herokuapp.com/login
 
 • Verify successful login with valid username and password.
 • Verify login failure with appropriate error message for invalid credentials.
+
+## Clone Repository
+
+git clone https://github.com/niteshk38/gocomet-assignment-nitesh
+cd gocomet-assignment-nitesh
+
+## Run tests locally
+mvn clean test
+
+
+
