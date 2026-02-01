@@ -21,4 +21,4 @@ jobs:
           java-version: '17'
 
       - name: Run Maven Tests
-        run: mvn clean test
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml

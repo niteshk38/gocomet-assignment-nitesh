@@ -12,7 +12,7 @@ public class LoginFail extends BaseTest {
 
         LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.login("wrong", "wrong");
+        loginPage.login("nitesh", "incorrect");
 
         Assert.assertTrue(
                 loginPage.getMessage().contains("Your username is invalid"),
