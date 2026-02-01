@@ -7,14 +7,25 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Driver {
 
-    public static WebDriver driver;
+    private static WebDriver driver;
 
     public static WebDriver getDriver() {
         if (driver == null) {
 
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--start-maximized");
+
+            if (System.getenv("CI") != null) {
+                options.addArguments("--headless");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--window-size=1920,1080");
+                options.addArguments("--disable-notifications");
+                options.addArguments("--disable-infobars");
+            } else {
+                options.addArguments("--start-maximized");
+            }
 
             driver = new ChromeDriver(options);
         }
